@@ -4,7 +4,8 @@ from flask_cors import CORS   # <-- add this
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 def filter_by_amount(results, amount):
     """Filter products that are <= given amount (numeric)."""
