@@ -13,7 +13,7 @@ def clean_price(price_str):
 
 def scrape_jumia(search_item):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # change to True if you don't want to see the browser
+        browser = p.chromium.launch(headless=True)  # change to True if you don't want to see the browser
         page = browser.new_page()
 
         # Go to the Jumia search page
